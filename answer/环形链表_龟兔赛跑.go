@@ -5,6 +5,9 @@ type ListNode struct {
 	Next *ListNode
 }
 
+/**
+141
+*/
 func hasCycle(head *ListNode) bool {
 	if head == nil || head.Next == nil {
 		return false

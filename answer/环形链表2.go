@@ -1,5 +1,8 @@
 package answer
 
+/**
+142
+*/
 func detectCycle(head *ListNode) *ListNode {
 	slow, fast := head, head
 	for fast != nil {
