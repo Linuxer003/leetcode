@@ -12,8 +12,7 @@ func videoStitching(clips [][]int, t int) int {
 	for i := 1; i <= t; i++ {
 		for _, c := range clips {
 			l, r := c[0], c[1]
-			// 若能剪出子区间 [l,i]，则可以从 dp[l] 转移到 dp[i]
-			if l < i && i <= r && dp[l]+1 < dp[i] {
+			if l < i && i < r && dp[l]+1 < dp[i] {
 				dp[i] = dp[l] + 1
 			}
 		}
