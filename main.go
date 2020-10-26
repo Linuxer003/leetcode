@@ -1,11 +1,11 @@
 package main
 
 import (
-	"leetcode/answer"
+	"leetcode/math"
 )
 
 func main() {
 	var x, y int
-	answer.ExGcd2(47, 30, &x, &y)
+	math.ExGcd2(47, 30, &x, &y)
 	println(y)
 }

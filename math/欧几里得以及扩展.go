@@ -1,4 +1,4 @@
-package answer
+package math
 
 // Gcd 递归版本
 func Gcd(a, b int) int {
