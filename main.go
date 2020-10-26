@@ -1,6 +1,11 @@
 package main
 
-//func main() {
-//	var mat = [][]int{{1,10,10}, {1,4,5},{2,3,6}}
-//	fmt.Println(answer.KthSmallest(mat, 14))
-//}
+import (
+	"leetcode/answer"
+)
+
+func main() {
+	var x, y int
+	answer.ExGcd2(47, 30, &x, &y)
+	println(y)
+}
