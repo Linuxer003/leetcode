@@ -1,11 +1,12 @@
 package main
 
 import (
-	"leetcode/math"
+	"fmt"
+	"leetcode/answer"
 )
 
 func main() {
-	var x, y int
-	math.ExGcd2(47, 30, &x, &y)
-	println(y)
+	root := &answer.TreeNode{1, nil, &answer.TreeNode{2, &answer.TreeNode{3, nil, nil}, nil}}
+
+	fmt.Println(answer.PreorderTraversal(root))
 }
