@@ -1,12 +1,9 @@
 package main
 
-import (
-	"fmt"
-	"leetcode/answer"
-)
+import "leetcode/answer"
 
 func main() {
-	root := &answer.TreeNode{1, nil, &answer.TreeNode{2, &answer.TreeNode{3, nil, nil}, nil}}
-
-	fmt.Println(answer.PreorderTraversal(root))
+	arr := []int{1, 15, 7, 9, 2, 5, 10}
+	k := 3
+	answer.MaxSumAfterPartitioning(arr, k)
 }
