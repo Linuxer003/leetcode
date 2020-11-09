@@ -3,9 +3,12 @@ package main
 import (
 	"fmt"
 	"leetcode/answer"
+	"time"
 )
 
 func main() {
-	prices := []int{7, 6, 4, 3, 1}
-	fmt.Println(answer.MaxProfit(prices))
+	t := time.Now().UnixNano()
+	prices := [][]int{{1, 3}, {-2, 2}, {5, -1}, {-2, 4}}
+	fmt.Println(answer.KClosest(prices, 2))
+	fmt.Println(time.Now().UnixNano() - t)
 }
