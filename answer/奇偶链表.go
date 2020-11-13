@@ -1,23 +1,18 @@
 package answer
 
-func oddEvenList(head *ListNode) *ListNode {
-	var odd, even, oddNext, evenNext *ListNode
-	odd = oddNext
-	even = evenNext
-	i := 1
-	for head != nil {
-		if i%2 == 1 {
-			oddNext = head
-			oddNext = oddNext.Next
-			head = head.Next
-		} else {
-			evenNext = head
-			evenNext = evenNext.Next
-			head = head.Next
-		}
-		i++
+func OddEvenList(head *ListNode) *ListNode {
+	if head == nil || head.Next == nil {
+		return head
 	}
-	oddNext = even
-	head = odd
+	evenHead := head.Next
+	odd := head
+	even := evenHead
+	for even != nil && even.Next != nil {
+		odd.Next = even.Next
+		even.Next = even.Next.Next
+		odd = odd.Next
+		even = even.Next
+	}
+	odd.Next = evenHead
 	return head
 }
