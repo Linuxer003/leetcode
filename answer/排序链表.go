@@ -20,5 +20,7 @@ func SortList(head *ListNode) *ListNode {
 	for i := 0; i < n-1; i++ {
 		arr[i].Next = arr[i+1]
 	}
+	// 这里必须执行末尾置空的操作，不然会出现无穷无尽的尾巴
+	arr[n-1].Next = nil
 	return arr[0]
 }

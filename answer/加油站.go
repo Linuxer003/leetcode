@@ -1,5 +1,7 @@
 package answer
 
+import "math"
+
 func canCompleteCircuit(gas []int, cost []int) int {
 	n, i := len(gas), 0
 	for i < n {
@@ -24,4 +26,21 @@ func canCompleteCircuit(gas []int, cost []int) int {
 		}
 	}
 	return -1
+}
+
+func canCompleteCircuit2(gas []int, cost []int) int {
+	n := len(gas)
+	spare, ans, minSpare := 0, 0, math.MaxInt16
+	for i := 0; i < n; i++ {
+		spare += gas[i] - cost[i]
+		if spare < minSpare {
+			minSpare = spare
+			ans = i
+		}
+	}
+	if spare < 0 {
+		return -1
+	} else {
+		return (ans + 1) % n
+	}
 }
