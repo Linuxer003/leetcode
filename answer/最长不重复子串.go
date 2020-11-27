@@ -17,12 +17,12 @@ func lengthOfLongestSubstring(s string) int {
 			rk++
 		}
 		// 第i到rk个字符是一个极长地无重复字符子串
-		ans = max(ans, rk-i+1)
+		ans = max2(ans, rk-i+1)
 	}
 	return ans
 }
 
-func max(x, y int) int {
+func max2(x, y int) int {
 	if x < y {
 		return y
 	}
